@@ -1,1 +1,1 @@
-# hello_world repo for daily strikes
+# hello_world
