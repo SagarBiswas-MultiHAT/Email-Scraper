@@ -2,10 +2,17 @@
 
 Find publicly listed business emails from category keywords with a safer, testable, production-ready Python CLI.
 
-[![CI](https://github.com/SagarBiswas-MultiHAT/Email-Scraper/actions/workflows/ci.yml/badge.svg)](https://github.com/SagarBiswas-MultiHAT/Email-Scraper/actions/workflows/ci.yml)
+<div align="right">
+
+[![CI](https://github.com/SagarBiswas-MultiHAT/Email-Scraper/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/SagarBiswas-MultiHAT/Email-Scraper/actions/workflows/ci.yml)
+&nbsp;
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+&nbsp;
 ![Python](https://img.shields.io/badge/python-3.10%20|%203.11%20|%203.12%20|%203.13-blue)
+&nbsp;
 ![Version](https://img.shields.io/badge/version-1.0.0-informational)
+
+</div>
 
 ## Overview
 
@@ -132,11 +139,7 @@ INFO Wrote results to results.csv
 ### 1) Free Mode (No API Keys)
 
 ```bash
-email-harvester \
-  --categories-file categories.txt \
-  --workers 8 \
-  --max-results-per-query 20 \
-  --output results.csv
+email-harvester --categories-file categories.txt --workers 8 --max-results-per-query 20 --output results.csv
 ```
 
 Uses DuckDuckGo fallback and MX checks only.
@@ -145,11 +148,7 @@ Uses DuckDuckGo fallback and MX checks only.
 
 ```bash
 export SERPAPI_KEY="your_key"
-email-harvester \
-  --categories-file categories.txt \
-  --serpapi-key "$SERPAPI_KEY" \
-  --max-results-per-query 30 \
-  --output serpapi_results.csv
+email-harvester --categories-file categories.txt --serpapi-key "$SERPAPI_KEY" --max-results-per-query 30 --output serpapi_results.csv
 ```
 
 Uses SerpApi as the primary search backend, then falls back to Bing and DuckDuckGo if needed.
@@ -157,11 +156,7 @@ Uses SerpApi as the primary search backend, then falls back to Bing and DuckDuck
 ### 3) Hunter Preview Mode (No Credits Spent)
 
 ```bash
-email-harvester \
-  --categories-file categories.txt \
-  --use-hunter \
-  --preview-hunter-costs \
-  --output preview.csv
+email-harvester --categories-file categories.txt --use-hunter --preview-hunter-costs --output preview.csv
 ```
 
 Shows estimated verification scope without executing Hunter verification calls.
@@ -170,12 +165,7 @@ Shows estimated verification scope without executing Hunter verification calls.
 
 ```bash
 export HUNTER_API_KEY="your_key"
-email-harvester \
-  --categories-file categories.txt \
-  --use-hunter \
-  --yes-run-hunter \
-  --max-hunter-verifications 40 \
-  --output verified.csv
+email-harvester --categories-file categories.txt --use-hunter --yes-run-hunter --max-hunter-verifications 40 --output verified.csv
 ```
 
 Performs real Hunter verifications up to the configured cap.
