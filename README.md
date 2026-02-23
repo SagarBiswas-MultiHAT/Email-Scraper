@@ -4,7 +4,7 @@ Find publicly listed business emails from category keywords with a safer, testab
 
 <div align="right">
 
-[![CI](https://github.com/SagarBiswas-MultiHAT/Email-Scraper/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/SagarBiswas-MultiHAT/Email-Scraper/actions/workflows/ci.yml)
+[![CI](https://github.com/SagarBiswas-MultiHAT/Email-Harvester/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/SagarBiswas-MultiHAT/Email-Harvester/actions/workflows/ci.yml)
 &nbsp;
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 &nbsp;
@@ -35,7 +35,7 @@ This repository now ships as a modular Python package with linting, tests, CI, a
 ## Demo / Screenshots
 
 ```
-(.venv) PS H:\updatedReposV1\NewProjects\Email-Scraper> email-harvester --categories-file categories.txt --workers 8 --max-results-per-query 20 --output results.csv
+(.venv) PS H:\updatedReposV1\NewProjects\Email-Harvester> email-harvester --categories-file categories.txt --workers 8 --max-results-per-query 20 --output results.csv
 2026-02-24 03:07:24,856 INFO Searching: intitle:"contact" "Blogger" OR intitle:"about" "Blogger" OR "Blogger" "contact"
 2026-02-24 03:07:34,961 INFO  --> found 10 candidate URLs
 2026-02-24 03:07:37,151 INFO Searching: "Blogger" site:.com
@@ -100,8 +100,8 @@ scanning pages: 100%|███████████████████�
 ### Installation
 
 ```bash
-git clone https://github.com/SagarBiswas-MultiHAT/Email-Scraper.git
-cd Email-Scraper
+git clone https://github.com/SagarBiswas-MultiHAT/Email-Harvester.git
+cd Email-Harvester
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
@@ -190,7 +190,7 @@ This bypasses search providers and crawls only your supplied URLs.
 ## Project Structure
 
 ```text
-Email-Scraper/
+Email-Harvester/
 |- src/email_harvester/
 |  |- cli.py                 # CLI parser and command entrypoint
 |  |- config.py              # Validated runtime config model
